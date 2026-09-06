@@ -1,0 +1,25 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: family-budget-tracker
+
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/budget_db"
+    username: "postgres_user"
+    password: "postgres_psw"
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        JDBC:
+          time_zone: UTC
+
+
+
