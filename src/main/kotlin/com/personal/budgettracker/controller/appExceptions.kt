@@ -7,3 +7,5 @@ data class ErrorResponse(
 )
 
 class NotFoundException(message: String?) : RuntimeException(message)
+
+class InsufficientFundsException(message: String?) : RuntimeException(message)

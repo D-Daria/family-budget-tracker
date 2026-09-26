@@ -17,7 +17,7 @@ import java.time.Instant
 
 @Entity
 @Table(name = "account")
-class Account(
+class AccountEntity(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,7 +41,7 @@ class Account(
 
 @Entity
 @Table(name = "transaction")
-class Transaction(
+class TransactionEntity(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,7 +49,7 @@ class Transaction(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id", nullable = false)
-    var account: Account,
+    var account: AccountEntity,
 
     @Column(nullable = false, precision = 19, scale = 2)
     var amount: BigDecimal = BigDecimal.ZERO,
@@ -63,4 +63,3 @@ class Transaction(
     @Column(nullable = false, updatable = false)
     var timestamp: Instant
 )
-

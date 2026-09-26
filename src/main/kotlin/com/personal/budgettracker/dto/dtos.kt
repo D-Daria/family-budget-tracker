@@ -25,3 +25,7 @@ data class TransactionResponse(
     val description: String?,
     val timestamp: Instant
 )
+
+data class TransactionRequest(
+    val amount: BigDecimal
+)

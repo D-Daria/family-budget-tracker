@@ -20,6 +20,3 @@ spring:
         format_sql: true
         JDBC:
           time_zone: UTC
-
-
-

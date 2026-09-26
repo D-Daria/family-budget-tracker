@@ -1,9 +1,9 @@
 package com.personal.budgettracker.dto
 
-import com.personal.budgettracker.entity.Account
-import com.personal.budgettracker.entity.Transaction
+import com.personal.budgettracker.entity.AccountEntity
+import com.personal.budgettracker.entity.TransactionEntity
 
-fun Account.toResponse(): AccountResponse =
+fun AccountEntity.toResponse(): AccountResponse =
     AccountResponse(
         id = this.id,
         name = this.name,
@@ -12,7 +12,7 @@ fun Account.toResponse(): AccountResponse =
         createdAt = this.createdAt
     )
 
-fun Transaction.toResponse(): TransactionResponse =
+fun TransactionEntity.toResponse(): TransactionResponse =
     TransactionResponse(
         id = this.id,
         accountId = this.account.id,
